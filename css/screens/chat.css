@@ -71,6 +71,15 @@
   align-items: flex-end;
 }
 
+@keyframes totheLeft {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
 .message__bubble {
   background-color: white;
   padding: 14px;
@@ -85,8 +94,18 @@
   font-size: 15px;
 }
 
+@keyframes totheRight {
+  from {
+    transform: translateX(1000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
 .message-row--own {
   justify-content: flex-end;
+  animation: totheRight 2s ease-in-out;
 }
 
 .message-row--own .message__bubble {
